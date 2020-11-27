@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aa67bb14-389b-4bb0-8d8a-355a17db99b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/example/example.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app_float_box.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app_info_show_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app_network_show_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1koJ5iZsoVbb2Kxd1GfWsC8x9Tc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa67bb14-389b-4bb0-8d8a-355a17db99b6" name="Default Changelist" comment="" />
+      <created>1606360829177</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606360829177</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="589" y="251" key="SettingsEditor" timestamp="1606445611441">
+      <screen x="0" y="23" width="2560" height="1342" />
+    </state>
+    <state x="589" y="251" key="SettingsEditor/0.23.2560.1342@0.23.2560.1342" timestamp="1606445611441" />
+    <state x="1213" y="406" width="1018" height="670" key="find.popup" timestamp="1606392662426">
+      <screen x="0" y="23" width="2560" height="1342" />
+    </state>
+    <state x="1213" y="406" width="1018" height="670" key="find.popup/0.23.2560.1342@0.23.2560.1342" timestamp="1606392662426" />
+    <state x="252" y="326" key="run.anything.popup" timestamp="1606471136370">
+      <screen x="0" y="23" width="2560" height="1342" />
+    </state>
+    <state x="252" y="326" key="run.anything.popup/0.23.2560.1342@0.23.2560.1342" timestamp="1606471136370" />
+  </component>
+</project>
