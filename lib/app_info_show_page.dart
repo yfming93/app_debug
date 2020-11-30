@@ -20,13 +20,17 @@ class _AppInfoShowPageState extends State<AppInfoShowPage> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Text("版本环境",style: TextStyle(color: Colors.black,fontSize: 22,fontWeight: FontWeight.w600),),
+        title: Text(
+          "版本环境",
+          style: TextStyle(
+              color: Colors.black, fontSize: 22, fontWeight: FontWeight.w600),
+        ),
       ),
       body: Container(
         child: ListView.builder(
           shrinkWrap: true,
           itemBuilder: (BuildContext context, int index) {
-            return _listItem(context,index,arr[index].toString());
+            return _listItem(context, index, arr[index].toString());
           },
           itemCount: arr.length,
         ),
@@ -34,15 +38,15 @@ class _AppInfoShowPageState extends State<AppInfoShowPage> {
     );
   }
 
-  Widget _listItem (BuildContext ctx, int index,  String text){
-    int num = 100 * (index % 7) ;
+  Widget _listItem(BuildContext ctx, int index, String text) {
+    int num = 100 * (index % 7);
     bool isApi = false;
-    if (text == AppDebug.instance.apiSelected){
+    if (text == AppDebug.instance.apiSelected) {
       isApi = true;
     }
     return GestureDetector(
-      onTap: (){
-        if (index > 0 ){
+      onTap: () {
+        if (index > 0) {
           if (AppDebug.instance.apiSelectedCallback != null) {
             showDialog(
                 context: context,
@@ -51,17 +55,23 @@ class _AppInfoShowPageState extends State<AppInfoShowPage> {
                     title: Text('提示'),
                     content: Text('您确定要切换接口环境吗？切换后可能需要重新登录！'),
                     actions: <Widget>[
-                      FlatButton(child: Text('取消'),onPressed: (){
-                        Navigator.pop(context);
-                      },),
-                      FlatButton(child: Text('确认'),onPressed: (){
-                        AppDebug.instance.apiSelectedCallback(text);
-                        AppDebug.instance.apiSelected = text;
-                        AppDebug.snackBar(ctx, text,title: "环境接切换为\n");
+                      FlatButton(
+                        child: Text('取消'),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      FlatButton(
+                        child: Text('确认'),
+                        onPressed: () {
+                          AppDebug.instance.apiSelectedCallback(text);
+                          AppDebug.instance.apiSelected = text;
+                          AppDebug.snackBar(ctx, text, title: "环境接切换为\n");
 
-                        setState(() {});
-                        Navigator.pop(context);
-                      },),
+                          setState(() {});
+                          Navigator.pop(context);
+                        },
+                      ),
                     ],
                   );
                 });
@@ -72,13 +82,14 @@ class _AppInfoShowPageState extends State<AppInfoShowPage> {
         color: Colors.blue[num],
         child: ListTile(
           trailing: isApi ? Text("当前环境") : Text(""),
-          title: RichText(text: TextSpan(
-            text: text,
-            style: TextStyle(
-              color: Colors.red,
-              fontSize: 16,
+          title: RichText(
+            text: TextSpan(
+              text: text,
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 16,
+              ),
             ),
-          ),
           ),
         ),
       ),

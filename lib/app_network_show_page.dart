@@ -21,19 +21,23 @@ class _AppNetworkShowPageState extends State<AppNetworkShowPage> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Text("接口打印",style: TextStyle(color: Colors.black,fontSize: 22,fontWeight: FontWeight.w600),),
+        title: Text(
+          "接口打印",
+          style: TextStyle(
+              color: Colors.black, fontSize: 22, fontWeight: FontWeight.w600),
+        ),
       ),
       body: Container(
         child: ListView.builder(
           shrinkWrap: true,
           itemBuilder: (BuildContext context, int index) {
             int num = 100 * (index % 5);
-            String textShow = AppDebug.instance.data[index]??"";
+            String textShow = AppDebug.instance.data[index] ?? "";
             return Container(
               color: Colors.blue[num],
               child: GestureDetector(
-                onTap: (){
-                  AppDebug.snackBar(context, textShow,autoCopy: true);
+                onTap: () {
+                  AppDebug.snackBar(context, textShow, autoCopy: true);
                 },
                 child: ListTile(
                   title: RichText(

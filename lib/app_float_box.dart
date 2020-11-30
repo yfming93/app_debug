@@ -6,7 +6,6 @@ import 'package:flutter/cupertino.dart';
 
 /// 应用全局悬浮框
 class AppFloatBox extends StatefulWidget {
-
   final bool showAnimation; //是否显示呼吸动画
   AppFloatBox(this.showAnimation);
 
@@ -23,15 +22,16 @@ class _AppFloatBoxState extends State<AppFloatBox>
   double kWidth = 55;
   double kGap = 0;
   double _kSize = 55;
-  Offset offset = Offset(55/2, kToolbarHeight + 100);
+  Offset offset = Offset(55 / 2, kToolbarHeight + 100);
 
   @override
   void initState() {
     super.initState();
     kGap = kWidth;
-    if (widget.showAnimation){
-      _controller = AnimationController(duration: Duration(seconds: 2), vsync: this)
-        ..repeat(reverse: true);
+    if (widget.showAnimation) {
+      _controller =
+          AnimationController(duration: Duration(seconds: 2), vsync: this)
+            ..repeat(reverse: true);
     }
   }
 
@@ -45,11 +45,11 @@ class _AppFloatBoxState extends State<AppFloatBox>
     _width = kGap;
     _height = kGap;
     double dx = kGap;
-    if (offset.dx + nextOffset.dx <= kGap/2) {
-      dx = kGap/2 ;
+    if (offset.dx + nextOffset.dx <= kGap / 2) {
+      dx = kGap / 2;
 //      print("dx0:$dx");
-    } else if (offset.dx + nextOffset.dx + _width >= size.width - kGap/2) {
-      dx = size.width - _width - kGap/2;
+    } else if (offset.dx + nextOffset.dx + _width >= size.width - kGap / 2) {
+      dx = size.width - _width - kGap / 2;
 //      print("dx1:$dx");
     } else {
       dx = offset.dx + nextOffset.dx;
@@ -59,18 +59,15 @@ class _AppFloatBoxState extends State<AppFloatBox>
     if (offset.dy + nextOffset.dy <= kGap) {
 //      print("dy1:$dy");
       dy = kGap;
-    } else if (offset.dy + nextOffset.dy + _height >= size.height - kGap/2) {
-      dy = size.height - _height - kGap/2;
+    } else if (offset.dy + nextOffset.dy + _height >= size.height - kGap / 2) {
+      dy = size.height - _height - kGap / 2;
 //      print("dy0:$dy");
 
-    } else{
+    } else {
       dy = offset.dy + nextOffset.dy;
 //      print("dy2:$dy");
     }
-    return Offset(
-        dx,
-        dy
-    );
+    return Offset(dx, dy);
   }
 
   @override
@@ -103,34 +100,37 @@ class _AppFloatBoxState extends State<AppFloatBox>
               _show(context);
             },
             onPanEnd: (detail) {},
-            child: widget.showAnimation ? AnimatedBuilder(
-                animation: _controller,
-                builder: (context,child){
-                  return _floatBox ();
-                }
-            ) : _floatBox (),
+            child: widget.showAnimation
+                ? AnimatedBuilder(
+                    animation: _controller,
+                    builder: (context, child) {
+                      return _floatBox();
+                    })
+                : _floatBox(),
           ),
         ),
       ),
     );
   }
-  Widget _floatBox (){
+
+  Widget _floatBox() {
     return Container(
-      height: isShowDebugEntrance ? _kSize :0,
-      width: isShowDebugEntrance ? _kSize :0,
-      decoration: widget.showAnimation ? BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: RadialGradient(//主要代码
-              colors: [Colors.blue[600],Colors.blue[100]],
-              stops: [_controller.value,_controller.value+0.1]
-          )
-      ) : BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.deepPurple,
-      ),
+      height: isShowDebugEntrance ? _kSize : 0,
+      width: isShowDebugEntrance ? _kSize : 0,
+      decoration: widget.showAnimation
+          ? BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: RadialGradient(
+                  //主要代码
+                  colors: [Colors.blue[600], Colors.blue[100]],
+                  stops: [_controller.value, _controller.value + 0.1]))
+          : BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.deepPurple,
+            ),
       child: Icon(
         Icons.bug_report,
-        color: isShowDebugEntrance ? Colors.white: Colors.transparent,
+        color: isShowDebugEntrance ? Colors.white : Colors.transparent,
         size: 32,
       ),
     );
@@ -207,7 +207,7 @@ class _AppFloatBoxState extends State<AppFloatBox>
                 Icon(
                   icon,
                   size: 45,
-                  color:  Colors.white,
+                  color: Colors.white,
                 ),
                 Text(name),
                 Container(),
