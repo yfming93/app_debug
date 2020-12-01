@@ -14,7 +14,6 @@ class AppDebug {
 
   /// 记录当前点击次数
   static int timesClick = 0;
-
   /// entry
   static OverlayEntry entry;
   static const String STORAGE_KEY = "openAppDebug";

@@ -78,3 +78,7 @@ The first page of finish launching.
     };
   }
 ```
+-----------------
+## 0x04 Gif show
+
+![](https://yfmingo.oss-cn-beijing.aliyuncs.com/images/app_debug2.gif)
