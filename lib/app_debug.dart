@@ -89,27 +89,32 @@ class AppDebug {
       {String title = "", bool autoCopy = false}) {
     if (autoCopy) Clipboard.setData(ClipboardData(text: text));
     Scaffold.of(ctx).showSnackBar(SnackBar(
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          autoCopy
-              ? Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Icon(
-                    Icons.copy_rounded,
-                    color: Colors.green,
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Text(
-                    'Copied',
-                    style: TextStyle(color: Colors.red, fontSize: 22),
-                  ),
-                ])
-              : Text(title),
-          Text(text)
-        ],
+      content: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              autoCopy
+                  ? Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Icon(
+                  Icons.copy_rounded,
+                  color: Colors.green,
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                Text(
+                  'Copied',
+                  style: TextStyle(color: Colors.red, fontSize: 22),
+                ),
+              ])
+                  : Text(title),
+              Text(text)
+            ],
+          ),
+        )
+        ,
       ),
       behavior: SnackBarBehavior.floating,
     ));
