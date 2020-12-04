@@ -1,5 +1,5 @@
 name: app_debug
-description: A useful debug tool for flutter developer. Easy to use. Show anywhere where to want. You will look over the request log without computer. It's a quick way to chose the api host.
+description: A useful debug tool for flutter developer. Easy to use. Show it wherever you want. You will look over the request log without computer. It's a quick way to chose the api host.
 version: 1.0.2
 homepage: https://github.com/yfming93/app_debug
 

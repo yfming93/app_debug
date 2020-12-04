@@ -21,7 +21,7 @@ with Flutter:
 
 -----------------------
 
-## 0x02 init GestureDetector actions
+## 0x02 Init GestureDetector actions
 
 **In about_us_page, at version show.**
 Add a GestureDetector, and isManuel set true.
@@ -36,7 +36,7 @@ GestureDetector(
 
 --------------------
 
-## 0x03 show anywhere
+## 0x03 Show it wherever you want.
 **In splash_page or home_page, init AppDebug.**
 The first page of finish launching.
 

@@ -1,6 +1,6 @@
 # app_debug
 
-A useful debug tool for flutter developer. Easy to use. Show anywhere where to want. It's powerful and comfortable. You will look over the request log without computer. Logs can be viewed anywhere in the APP. It's a quick way to chose the api host. Change the api host to dev, test or prduct in APP. Just enjoy it. Have fun.
+A useful debug tool for flutter developer. Easy to use. Show it wherever you want. It's powerful and comfortable. You will look over the request log without computer. Logs can be viewed anywhere in the APP. It's a quick way to chose the api host. Change the api host to dev, test or prduct in APP. Just enjoy it. Have fun.
 
 
 ## Getting Started
