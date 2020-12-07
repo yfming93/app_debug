@@ -36,7 +36,21 @@ GestureDetector(
 
 --------------------
 
-## 0x03 Show it wherever you want.
+## 0x03 Add api reqeust log.
+
+At base request file. Add response, queryParameters, data, headers and url.
+
+```
+    AppDebug.instance.data.addObject({"response":jsonDecode(response.toString())});
+    AppDebug.instance.data.addObject({"queryParameters":queryParameters,});
+    AppDebug.instance.data.addObject({"data":data,});
+    AppDebug.instance.data.addObject({ "headers":_headers,});
+    AppDebug.instance.data.addObject({"url":"${baseUrl??_options.baseUrl}$url", });
+```
+
+------------------
+
+## 0x04 Show it wherever you want.
 **In splash_page or home_page, init AppDebug.**
 The first page of finish launching.
 
