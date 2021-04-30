@@ -8,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class AppDebug {
   /// 最大点击次数
-  static int maxClickTimes = 15; //最大点击次数
+  static int maxClickTimes = 10; //最大点击次数
   /// 是否打开调试工具
   static bool isOpenDebug = false;
 
@@ -57,28 +57,27 @@ class AppDebug {
     }
 
     timesClick++;
+    print('---timesClick:${timesClick}      maxClickTimes:${maxClickTimes}');
     if (timesClick < maxClickTimes) {
       return;
     } else {
       timesClick = 0;
       isOpenDebug = !isOpenDebug;
-      await saveConfig();
+      _overlayEntry(context);
     }
-    _overlayEntry(context);
   }
 
   static _overlayEntry(BuildContext context, {bool showAnimation}) async {
-    entry?.remove();
-    entry = null;
-    if (!isOpenDebug) {
-      isOpenDebug = false;
-      await saveConfig();
-      return;
+
+    if (isOpenDebug == false){
+      entry?.remove();
+    }else {
+      entry = OverlayEntry(builder: (context) {
+        return AppFloatBox(showAnimation ?? true);;
+      });
+      Overlay.of(context).insert(entry);
     }
-    entry = OverlayEntry(builder: (context) {
-      return AppFloatBox(showAnimation ?? true);
-    });
-    Overlay.of(context).insert(entry);
+    await saveConfig();
   }
 
   ///  Toast show  a text
@@ -202,6 +201,34 @@ class AppDebug {
       tab.write("\t");
     }
     return tab.toString();
+  }
+
+  static void showDebugDialog (BuildContext context , String content, var sureBack){
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text('提示'),
+            content: Text(content),
+            actions: <Widget>[
+              FlatButton(
+                child: Text('取消'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+              FlatButton(
+                child: Text('确认'),
+                onPressed: () {
+                  if (sureBack != null){
+                    sureBack();
+                  }
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          );
+        });
   }
 }
 

@@ -6,7 +6,7 @@
 Add this to your package's pubspec.yaml file:
 
         dependencies:
-          app_debug: ^1.0.0
+          app_debug: ^1.1.0
 2. **Install it**
 You can install packages from the command line:
 with Flutter:
@@ -30,27 +30,29 @@ GestureDetector(
   onTap: (){
     AppDebug.showDebugTool(context,isManuel: true);
   },
-  child: _getCellWithItem(_Type.CellVersion),
+  child: [YOU_WIDGET],
 ),
 ```
 
 --------------------
 
-## 0x03 Add api reqeust log.
+## 0x03 Add api request log.
 
 At base request file. Add response, queryParameters, data, headers and url.
 
 ```
-    AppDebug.instance.data.addObject({"response":jsonDecode(response.toString())});
-    AppDebug.instance.data.addObject({"queryParameters":queryParameters,});
-    AppDebug.instance.data.addObject({"data":data,});
-    AppDebug.instance.data.addObject({ "headers":_headers,});
-    AppDebug.instance.data.addObject({"url":"${baseUrl??_options.baseUrl}$url", });
+   AppDebug.instance.data.addObject({
+      "url":'${response.request.baseUrl+response.request.path}',
+      "queryParameters":json.encode(response.request.queryParameters),
+      "headers":json.encode(response.request.headers),
+      "response":jsonDecode(response.toString()),
+      '---':'------------------------------'
+    });
 ```
 
 ------------------
 
-## 0x04 Show it wherever you want.
+## 0x04 init it  after App launch.
 **In splash_page or home_page, init AppDebug.**
 The first page of finish launching.
 
@@ -67,10 +69,8 @@ The first page of finish launching.
     AppDebug.instance.apiSelected = Global.getApiUrl(); // 设置当前环境
     AppDebug.instance.apiList.add(ApiUrlConfig.API_DEV_URL); //添加 dev 环境 host
     AppDebug.instance.apiList.add(ApiUrlConfig.API_TEST_URL);  //添加 test 环境 host
-    AppDebug.instance.apiList.add(ApiUrlConfig.API_BETA_URL); //添加 beta 环境 host
-    AppDebug.instance.apiList.add(ApiUrlConfig.API_PRODUCT_URL); //添加 product 环境 host
     AppDebug.instance.apiSelectedCallback = (String api){ // api host 变更后回调
-      Global.env = ENV.values[AppDebug.instance.apiList.indexOf(api)];
+
     };
   }
 ```

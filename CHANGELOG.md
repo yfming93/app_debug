@@ -1,6 +1,12 @@
 
 # CHANGELOG
 
+## 1.1.0
+* Recode some not good
+* Support SelectableText to selectable some log what you want.
+* Support clear log data.
+* Fixed some bug.
+
 ## 1.0.2
 
 * Add some comments.

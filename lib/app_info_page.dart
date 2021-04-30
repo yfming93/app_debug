@@ -2,12 +2,12 @@ import 'package:app_debug/app_debug.dart';
 import 'package:flutter/material.dart';
 
 /// 接口 api host 选择界面。
-class AppInfoShowPage extends StatefulWidget {
-  AppInfoShowPage();
-  _AppInfoShowPageState createState() => _AppInfoShowPageState();
+class AppInfoPage extends StatefulWidget {
+  AppInfoPage();
+  _AppInfoPageState createState() => _AppInfoPageState();
 }
 
-class _AppInfoShowPageState extends State<AppInfoShowPage> {
+class _AppInfoPageState extends State<AppInfoPage> {
   @override
   void initState() {
     super.initState();
@@ -18,7 +18,7 @@ class _AppInfoShowPageState extends State<AppInfoShowPage> {
     arr.addAll(AppDebug.instance.apiList);
     arr.insert(0, "选择接口环境");
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      // resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Text(
           "版本环境",
@@ -48,33 +48,13 @@ class _AppInfoShowPageState extends State<AppInfoShowPage> {
       onTap: () {
         if (index > 0) {
           if (AppDebug.instance.apiSelectedCallback != null) {
-            showDialog(
-                context: context,
-                builder: (context) {
-                  return AlertDialog(
-                    title: Text('提示'),
-                    content: Text('您确定要切换接口环境吗？切换后可能需要重新登录！'),
-                    actions: <Widget>[
-                      FlatButton(
-                        child: Text('取消'),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                      ),
-                      FlatButton(
-                        child: Text('确认'),
-                        onPressed: () {
-                          AppDebug.instance.apiSelectedCallback(text);
-                          AppDebug.instance.apiSelected = text;
-                          AppDebug.snackBar(ctx, text, title: "环境接切换为\n");
+            AppDebug.showDebugDialog(context,'您确定要切换接口环境吗？切换后可能需要重新登录！',(){
+              AppDebug.instance.apiSelectedCallback(text);
+              AppDebug.instance.apiSelected = text;
+              AppDebug.snackBar(ctx, text, title: "环境接切换为\n");
+              setState(() {});
+            });
 
-                          setState(() {});
-                          Navigator.pop(context);
-                        },
-                      ),
-                    ],
-                  );
-                });
           }
         }
       },

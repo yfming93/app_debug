@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="aa67bb14-389b-4bb0-8d8a-355a17db99b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/app_net_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_debug.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app_debug.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/example.md" beforeDir="false" afterPath="$PROJECT_DIR$/example/example.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app_debug.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app_debug.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app_float_box.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app_float_box.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app_info_show_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app_info_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app_network_show_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,17 +45,18 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
     <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -49,18 +77,29 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="589" y="251" key="SettingsEditor" timestamp="1606445611441">
-      <screen x="0" y="23" width="2560" height="1342" />
+    <state x="288" y="90" key="SettingsEditor" timestamp="1619764385194">
+      <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state x="589" y="251" key="SettingsEditor/0.23.2560.1342@0.23.2560.1342" timestamp="1606445611441" />
-    <state x="1213" y="406" width="1018" height="670" key="find.popup" timestamp="1606392662426">
-      <screen x="0" y="23" width="2560" height="1342" />
+    <state x="288" y="90" key="SettingsEditor/-1920.23.1920.1057/0.23.1792.1031@0.23.1792.1031" timestamp="1619764385194" />
+    <state x="516" y="251" width="759" height="646" key="find.popup" timestamp="1619773198874">
+      <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state x="1213" y="406" width="1018" height="670" key="find.popup/0.23.2560.1342@0.23.2560.1342" timestamp="1606392662426" />
-    <state x="252" y="326" key="run.anything.popup" timestamp="1606471136370">
-      <screen x="0" y="23" width="2560" height="1342" />
+    <state x="516" y="251" width="759" height="646" key="find.popup/-1920.23.1920.1057/0.23.1792.1031@0.23.1792.1031" timestamp="1619773198874" />
+    <state x="477" y="245" key="run.anything.popup" timestamp="1619776005071">
+      <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state x="252" y="326" key="run.anything.popup/0.23.2560.1342@0.23.2560.1342" timestamp="1606471136370" />
+    <state x="477" y="245" key="run.anything.popup/-1920.23.1920.1057/0.23.1792.1031@0.23.1792.1031" timestamp="1619776005071" />
   </component>
 </project>

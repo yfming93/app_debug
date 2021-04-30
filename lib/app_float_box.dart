@@ -1,6 +1,6 @@
 import 'dart:math' as math;
-import 'package:app_debug/app_info_show_page.dart';
-import 'package:app_debug/app_network_show_page.dart';
+import 'package:app_debug/app_info_page.dart';
+import 'package:app_debug/app_net_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -8,20 +8,23 @@ import 'package:flutter/cupertino.dart';
 class AppFloatBox extends StatefulWidget {
   final bool showAnimation; //是否显示呼吸动画
   AppFloatBox(this.showAnimation);
-
-  _AppFloatBoxState createState() => _AppFloatBoxState();
+  _AppFloatBoxState state;
+  _AppFloatBoxState createState() {
+    state = _AppFloatBoxState();
+    return state;
+  }
 }
 
 class _AppFloatBoxState extends State<AppFloatBox>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  AnimationController anController;
   bool isShowDebugEntrance = true; //是否显示调试入口
 
   double _width;
   double _height;
-  double kWidth = 55;
+  double kWidth = 40;
   double kGap = 0;
-  double _kSize = 55;
+  double _kSize = 40;
   Offset offset = Offset(55 / 2, kToolbarHeight + 100);
 
   @override
@@ -29,7 +32,7 @@ class _AppFloatBoxState extends State<AppFloatBox>
     super.initState();
     kGap = kWidth;
     if (widget.showAnimation) {
-      _controller =
+      anController =
           AnimationController(duration: Duration(seconds: 2), vsync: this)
             ..repeat(reverse: true);
     }
@@ -37,8 +40,8 @@ class _AppFloatBoxState extends State<AppFloatBox>
 
   @override
   void dispose() {
+    anController.dispose();
     super.dispose();
-    _controller.dispose();
   }
 
   Offset _calOffset(Size size, Offset offset, Offset nextOffset) {
@@ -72,8 +75,8 @@ class _AppFloatBoxState extends State<AppFloatBox>
 
   @override
   Widget build(BuildContext context) {
-//    final Animation opacityAnimation = Tween(begin:0.0,end: 0.8).animate(_controller);//第一种写法
-//    final Animation containerAnimation = Tween(begin: 200.0,end: 400.0).animate(_controller);
+//    final Animation opacityAnimation = Tween(begin:0.0,end: 0.8).animate(anController);//第一种写法
+//    final Animation containerAnimation = Tween(begin: 200.0,end: 400.0).animate(anController);
 
     return Theme(
       data: Theme.of(context).copyWith(
@@ -102,7 +105,7 @@ class _AppFloatBoxState extends State<AppFloatBox>
             onPanEnd: (detail) {},
             child: widget.showAnimation
                 ? AnimatedBuilder(
-                    animation: _controller,
+                    animation: anController,
                     builder: (context, child) {
                       return _floatBox();
                     })
@@ -123,7 +126,7 @@ class _AppFloatBoxState extends State<AppFloatBox>
               gradient: RadialGradient(
                   //主要代码
                   colors: [Colors.blue[600], Colors.blue[100]],
-                  stops: [_controller.value, _controller.value + 0.1]))
+                  stops: [anController.value, anController.value + 0.1]))
           : BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.deepPurple,
@@ -131,7 +134,7 @@ class _AppFloatBoxState extends State<AppFloatBox>
       child: Icon(
         Icons.bug_report,
         color: isShowDebugEntrance ? Colors.white : Colors.transparent,
-        size: 32,
+        size: 20,
       ),
     );
   }
@@ -157,8 +160,8 @@ class _AppFloatBoxState extends State<AppFloatBox>
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    _items(Icons.network_check, "接口打印", AppNetworkShowPage()),
-                    _items(Icons.accessibility, "版本环境", AppInfoShowPage()),
+                    _items(Icons.network_check, "接口打印", AppNetPage()),
+                    _items(Icons.accessibility, "版本环境", AppInfoPage()),
                   ],
                 ),
                 Container(
