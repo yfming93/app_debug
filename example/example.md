@@ -42,7 +42,7 @@ At base request file. Add response, queryParameters, data, headers and url.
 
 ```
    AppDebug.instance.data.addObject({
-      "url":'${response.request.baseUrl+response.request.path}',
+      "url":"${response.request.baseUrl+response.request.path}",
       "queryParameters":json.encode(response.request.queryParameters),
       "headers":json.encode(response.request.headers),
       "response":jsonDecode(response.toString()),

@@ -30,7 +30,7 @@ class _AppNetPageState extends State<AppNetPage> {
           InkWell (
             onTap: (){
 
-              AppDebug.showDebugDialog(context,'你确定要清楚吗？',(){
+              AppDebug.showDebugDialog(context,'你确定要清除吗？',(){
                 AppDebug.instance.data.clear();
                 setState(() {
 

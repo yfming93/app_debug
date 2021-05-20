@@ -20,18 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa67bb14-389b-4bb0-8d8a-355a17db99b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/app_net_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_debug.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app_debug.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/example.md" beforeDir="false" afterPath="$PROJECT_DIR$/example/example.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app_debug.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app_debug.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app_float_box.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app_float_box.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app_info_show_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app_info_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app_network_show_page.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app_net_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app_net_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +78,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="288" y="90" key="SettingsEditor" timestamp="1619764385194">
